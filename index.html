@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Pimentel AC">
+<meta name="theme-color" content="#061827">
+<title>Pimentel Diagnóstico AC</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#020a12;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.app{max-width:520px;min-height:100vh;margin:auto;padding:calc(16px + env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom));background:linear-gradient(180deg,#061827,#03101a)}
+header{text-align:center;padding:8px 0 18px}.logo{font-weight:900;font-size:23px}.logo span{color:#12adff}.tag{font-size:12px;color:#75d9ff;margin-top:4px}
+.screen{display:none}.screen:target{display:block}.home{display:block}.screen:target~.home{display:none}
+body:not(:has(.screen:target)) .home{display:block}
+.card{background:#0b2538;border:1px solid #20516d;border-radius:17px;padding:17px;margin:11px 0}.hero{text-align:center;padding:26px 17px}.snow{font-size:55px}.hero h1{font-size:24px;margin:8px 0}.muted{color:#a8bfcc;line-height:1.45;font-size:14px}
+a.btn,button{display:block;width:100%;border:0;border-radius:12px;padding:15px;margin:7px 0;text-align:center;text-decoration:none;color:#fff;background:#10324a;font-size:16px;font-weight:750}
+.primary{background:linear-gradient(90deg,#008ff0,#13b4ff)!important}.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.grid a{margin:0}.top{display:flex;align-items:center;gap:10px;margin:3px 0 15px}.top .back{width:auto;margin:0;padding:9px 13px}.top b{font-size:18px}.step{margin-left:auto;color:#70d5ff;font-size:12px}
+h2{font-size:20px;margin:7px 0 14px}h3{margin:7px 0 10px}label{display:block;color:#a8bfcc;font-size:13px;margin:11px 0 5px}
+input,select,textarea{width:100%;padding:13px;border-radius:10px;border:1px solid #2a5873;background:#061a28;color:#fff;font-size:16px}
+.option{border:1px solid #28607e!important;text-align:left!important}.result{border-left:4px solid #16b4ff}.ok{color:#55e58a}.warn{color:#ffd45c}
+.note{padding:12px;border-radius:10px;background:#082b40;color:#b9d5e2;font-size:13px;margin-top:10px}
+footer{text-align:center;color:#5f7e90;font-size:12px;margin-top:22px}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div class="logo">❄ PIMENTEL <span>DIAGNÓSTICO AC</span></div><div class="tag">Climatizando com Confiança!</div></header>
+
+<div class="home">
+ <div class="card hero"><div class="snow">❄️</div><h1>Assistente técnico</h1><p class="muted">Diagnóstico passo a passo para ar-condicionado.</p><a class="btn primary" href="#s1">🔧 Novo diagnóstico</a></div>
+ <div class="grid"><a class="btn" href="#historico">📋 Histórico</a><a class="btn" href="#erros">⚠️ Códigos de erro</a><a class="btn" href="#tecnica">📚 Base técnica</a><a class="btn" href="#config">⚙️ Configurações</a></div>
+</div>
+
+<section id="s1" class="screen"><div class="top"><a class="btn back" href="#">←</a><b>Novo diagnóstico</b><span class="step">1/5</span></div><div class="card"><h2>Qual o equipamento?</h2>
+<a class="btn option" href="#s2">Split Convencional</a><a class="btn option" href="#s2">Split Inverter</a><a class="btn option" href="#s2">Piso-Teto</a><a class="btn option" href="#s2">Cassete</a><a class="btn option" href="#s2">Janela</a></div></section>
+
+<section id="s2" class="screen"><div class="top"><a class="btn back" href="#s1">←</a><b>Marca e modelo</b><span class="step">2/5</span></div><div class="card"><label>Marca</label><select><option>Gree</option><option>Midea</option><option>Elgin</option><option>LG</option><option>Samsung</option><option>Daikin</option><option>Fujitsu</option></select><label>Modelo</label><input placeholder="Ex.: G-Top Inverter"><label>Capacidade</label><select><option>9.000 BTUs</option><option>12.000 BTUs</option><option>18.000 BTUs</option><option>24.000 BTUs</option><option>30.000 BTUs</option></select><a class="btn primary" href="#s3">Avançar →</a></div></section>
+
+<section id="s3" class="screen"><div class="top"><a class="btn back" href="#s2">←</a><b>Problema</b><span class="step">3/5</span></div><div class="card"><h2>O que está acontecendo?</h2>
+<a class="btn option" href="#s4">Não liga</a><a class="btn option" href="#s4">Liga e desarma</a><a class="btn option" href="#s4">Não aciona o compressor</a><a class="btn option" href="#s4">Não gela</a><a class="btn option" href="#s4">Ventilador não funciona</a><a class="btn option" href="#s4">Código de erro</a><a class="btn option" href="#s4">Pressão anormal</a></div></section>
+
+<section id="s4" class="screen"><div class="top"><a class="btn back" href="#s3">←</a><b>Medições</b><span class="step">4/5</span></div><div class="card"><label>Tensão (V)</label><input type="number" placeholder="220"><label>Corrente (A)</label><input type="number" step="0.1" placeholder="5,2"><label>Pressão de sucção (PSI)</label><input type="number" placeholder="72"><label>Temperatura ambiente (°C)</label><input type="number" placeholder="32"><label>Temperatura de retorno (°C)</label><input type="number" placeholder="24"><label>Temperatura de insuflamento (°C)</label><input type="number" placeholder="14"><a class="btn primary" href="#s5">Avançar →</a></div></section>
+
+<section id="s5" class="screen"><div class="top"><a class="btn back" href="#s4">←</a><b>Teste</b><span class="step">5/5</span></div><div class="card"><h2>Resultado do teste principal</h2>
+<a class="btn option" href="#resultado">Alimentação normal</a><a class="btn option" href="#resultado">Alimentação fora da faixa</a><a class="btn option" href="#resultado">Sensor dentro da faixa</a><a class="btn option" href="#resultado">Sensor fora da faixa</a><a class="btn option" href="#resultado">Comunicação normal</a><a class="btn option" href="#resultado">Falha de comunicação</a><a class="btn option" href="#resultado">Ainda não testado</a></div></section>
+
+<section id="resultado" class="screen"><div class="top"><a class="btn back" href="#s5">←</a><b>Resultado</b></div><div class="card result"><h2>🔎 Diagnóstico concluído</h2><p><b>Possibilidades encontradas</b></p><p>1. Sensor de temperatura</p><p>2. Comunicação entre unidades</p><p>3. Alimentação elétrica</p><p>4. Proteção da placa</p><p class="warn">⚠ Confirme a causa com medições e procedimento do fabricante antes de trocar qualquer peça.</p></div><a class="btn primary" href="#historico">💾 Salvar / ver histórico</a><a class="btn" href="#">⌂ Voltar ao início</a></section>
+
+<section id="historico" class="screen"><div class="top"><a class="btn back" href="#">←</a><b>Histórico</b></div><div class="card"><h2>📋 Meus atendimentos</h2><p class="muted">O histórico completo será salvo no aparelho na versão final do aplicativo.</p><div class="note">Próximo recurso: cliente, endereço, fotos, serviço, peças, valor e geração de PDF.</div></div></section>
+
+<section id="erros" class="screen"><div class="top"><a class="btn back" href="#">←</a><b>Códigos de erro</b></div><div class="card"><h2>⚠️ Consulta</h2><label>Marca</label><select><option>Gree</option><option>Midea</option><option>Elgin</option><option>LG</option><option>Samsung</option><option>Daikin</option></select><label>Código</label><input placeholder="Ex.: E4"><div class="note">A base da versão final vai cruzar marca + modelo + código + sintomas e indicar os testes recomendados.</div></div></section>
+
+<section id="tecnica" class="screen"><div class="top"><a class="btn back" href="#">←</a><b>Base técnica</b></div><div class="card"><h2>📐 Medições</h2><p class="muted">Tensão, corrente, pressão, temperaturas, superaquecimento e sub-resfriamento.</p></div><div class="card"><h2>🔧 Diagnóstico</h2><p class="muted">A árvore técnica será ampliada com marcas, modelos, códigos e procedimentos.</p></div></section>
+
+<section id="config" class="screen"><div class="top"><a class="btn back" href="#">←</a><b>Configurações</b></div><div class="card"><h2>⚙️ Empresa</h2><label>Técnico</label><input placeholder="Seu nome"><label>Empresa</label><input value="Thiago Pimentel Ar-Condicionado"><div class="note">Na versão final: logo, telefone/WhatsApp e dados do relatório.</div></div></section>
+
+<footer>Pimentel Diagnóstico AC • V2</footer>
+</div>
+</body>
+</html>
